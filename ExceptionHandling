@@ -1,0 +1,47 @@
+
+public class ExceptionHandling {
+    public static void main(String args[])
+    {
+        try
+        {
+           // class.forName("com.mysql.jdbc.Driver");
+            int a=200, b=0, c;
+            c=a/b;
+            System.out.println(c);
+            
+        }
+        catch(ArithmeticException e)
+    
+        {
+            System.out.println("You cannot divide by zero!!!");
+        }
+        try
+        {
+           int num=Integer.parseInt("Hello");
+           System.out.println(num);
+           
+           
+        }
+        catch(NumberFormatException ne)
+            
+                {
+                    System.out.println("Number Format Exception");
+                    
+                }
+        try
+        {
+            int a[]= new int[5];
+            a[7]=10;
+            
+        }
+        catch(ArrayIndexOutOfBoundsException e)
+        {
+            System.out.println("Array index out of bounds exception" );
+        }
+        finally
+        {
+            System.out.println("Finally block always executes");
+        }
+    }
+    
+}
