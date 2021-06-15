@@ -1,0 +1,40 @@
+import java.util.*;
+class complex
+{
+    private int real,img;
+    complex()
+    {
+        real=img=0;
+    }
+    complex(int real,int img)
+    {
+        this.real=real;
+        this.img=img;
+    }
+    void add(complex x,complex y)
+    {
+      real=x.real+y.real;
+      img=x.img+y.img;
+    }
+    void display()
+    {
+        System.out.println("\naddition of complex number:"+this.real+"+"+this.img+"i");
+     } 
+}
+
+public class addition
+{
+
+          public static void main(String[]args)
+            {
+                  complex c1=new complex(5,5);
+                  complex c2=new complex(3,2);
+                   complex c3=new complex();
+           
+                  c3.add(c1,c2);
+                  c3.display();
+       
+             }
+}
+
+    
