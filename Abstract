@@ -1,0 +1,54 @@
+abstract class shape
+{
+    int side;
+    public void getdata(int x)
+    {
+        side=x;
+    }
+    abstract public void area();
+    
+}
+ class circle extends shape
+{
+    double calc;
+    public void area()
+    {
+        calc=3.14*side*side;
+    }
+    public void display()
+    {
+        System.out.println("Area:"+calc);
+    }
+}
+class triangle extends circle
+{
+    double cal;
+    int height;
+    public void acceept(int x)
+    {
+        height=x;
+    }
+    public void area()
+    {
+       super.area();
+        cal=0.5*height*height;
+    }
+    public void display()
+    {
+      super.display();
+        System.out.println("Area of Tiangle:"+cal);
+    }
+}
+public class Abstract1 {
+    public static void main(String args[])
+    {
+        triangle t1=new triangle();
+        t1.getdata(5);
+        t1.acceept(10);
+        
+        t1.area();
+        t1.display();
+        
+    }
+    
+}
